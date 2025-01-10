@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Exchange</title>
+</head>
+<body>
+    <button onclick="connectMetaMask()">Connect MetaMask</button>
+    <button onclick="buyTokens()">Buy Tokens</button>
+    <button onclick="sellTokens()">Sell Tokens</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script>
+        let web3;
+        let userAccount;
+
+        async function connectMetaMask() {
+            if (typeof window.ethereum !== 'undefined') {
+                web3 = new Web3(window.ethereum);
+                try {
+                    await window.ethereum.request({ method: 'eth_requestAccounts' });
+                    userAccount = (await web3.eth.getAccounts())[0];
+                    console.log("Connected account:", userAccount);
+                } catch (error) {
+                    console.error("User denied account access", error);
+                }
+            } else {
+                console.error("MetaMask is not installed.");
+            }
+        }
+
+        async function buyTokens() {
+            const amountToBuy = web3.utils.toWei('0.1', 'ether'); // Example: Buy tokens for 0.1 Ether
+            const result = await web3.eth.sendTransaction({
+                from: userAccount,
+                to: 'YourExchangeAddressHere',
+                value: amountToBuy
+            });
+            console.log("Transaction successful:", result);
+        }
+
+        async function sellTokens() {
+            // Implement token sell logic
+        }
+    </script>
+</body>
+</html>

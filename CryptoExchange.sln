@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CryptoExchange", "CryptoExchange\CryptoExchange.vcxproj", "{1B05A659-29E7-47F2-8765-BDFD98B36128}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "public", "public", "{ABB6B8E9-B456-4FA5-B074-0D162AA14B8B}"
+	ProjectSection(SolutionItems) = preProject
+		index.html = index.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Debug", "Debug", "{0966639F-2D81-4B61-9521-E201B038BC9F}"
+	ProjectSection(SolutionItems) = preProject
+		users.text = users.text
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B05A659-29E7-47F2-8765-BDFD98B36128}.Debug|x64.ActiveCfg = Debug|x64
+		{1B05A659-29E7-47F2-8765-BDFD98B36128}.Debug|x64.Build.0 = Debug|x64
+		{1B05A659-29E7-47F2-8765-BDFD98B36128}.Debug|x86.ActiveCfg = Debug|Win32
+		{1B05A659-29E7-47F2-8765-BDFD98B36128}.Debug|x86.Build.0 = Debug|Win32
+		{1B05A659-29E7-47F2-8765-BDFD98B36128}.Release|x64.ActiveCfg = Release|x64
+		{1B05A659-29E7-47F2-8765-BDFD98B36128}.Release|x64.Build.0 = Release|x64
+		{1B05A659-29E7-47F2-8765-BDFD98B36128}.Release|x86.ActiveCfg = Release|Win32
+		{1B05A659-29E7-47F2-8765-BDFD98B36128}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D20A04DA-51EA-4534-BC32-4E1D6DAEE0BA}
+	EndGlobalSection
+EndGlobal
