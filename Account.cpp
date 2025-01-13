@@ -1,6 +1,6 @@
 #include "Account.h"
 
-Account::Account(const std::string& accountOwner, double initialBalance) 
+Account::Account(const std::string& accountOwner, double initialBalance)
     : owner(accountOwner), balance(initialBalance) {}
 
 const std::string& Account::getOwner() const {

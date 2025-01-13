@@ -1,57 +1,72 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Exchange</title>
+    <title>Crypto Exchange Interface</title>
+    <script>
+        async function fetchCoinsData() {
+            const response = await fetch('http://localhost:8080');
+            const data = await response.json();
+            const coins = data.coins;
+
+            let coinsList = '';
+            coins.forEach(coin => {
+                coinsList += `
+                            <h3>${coin.name}</h3>
+                            <p>Price (USD): ${coin.current_price}</p>
+                            <p>24h Change: ${coin.price_change_percentage_24h}%</p>
+                            <p>Circulating Supply: ${coin.circulating_supply}</p>
+                            <p>24h High: ${coin.high_24h}</p>
+                            <p>24h Low: ${coin.low_24h}</p>
+                            <hr />
+                        `;
+            });
+            document.getElementById('coinsData').innerHTML = coinsList;
+        }
+
+        // Call the function when the page loads
+        window.onload = fetchCoinsData;
+    </script>
 </head>
 <body>
-    <h1>Welcome to Crypto Exchange</h1>
-
-    <div id="userAccounts">
-        <h2>User Accounts</h2>
-        <ul id="accountsList"></ul>
-    </div>
-
-    <div id="coinData">
-        <h2>Coin Data</h2>
-        <ul id="coinsList"></ul>
-    </div>
-
+    <h1>Crypto Exchange</h1>
+    <div id="coinsData"></div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Exchange Interface</title>
     <script>
-        // Fetch and display user accounts
-        async function fetchUserAccounts(username) {
-            const response = await fetch(`/accounts?username=${username}`);
+        async function fetchCoinsData() {
+            const response = await fetch('http://localhost:8080');
             const data = await response.json();
+            const coins = data.coins;
 
-            const accountsList = document.getElementById("accountsList");
-            accountsList.innerHTML = '';
-            data.forEach(account => {
-                const li = document.createElement("li");
-                li.textContent = `${account.owner} - ${account.type} - Balance: ${account.balance}`;
-                accountsList.appendChild(li);
+            let coinsList = '';
+            coins.forEach(coin => {
+                coinsList += `
+                        <h3>${coin.name}</h3>
+                        <p>Price (USD): ${coin.current_price}</p>
+                        <p>24h Change: ${coin.price_change_percentage_24h}%</p>
+                        <p>Circulating Supply: ${coin.circulating_supply}</p>
+                        <p>24h High: ${coin.high_24h}</p>
+                        <p>24h Low: ${coin.low_24h}</p>
+                        <hr />
+                    `;
             });
+            document.getElementById('coinsData').innerHTML = coinsList;
         }
 
-        // Fetch and display coin data
-        async function fetchCoinData() {
-            const response = await fetch('/coins');
-            const data = await response.json();
-
-            const coinsList = document.getElementById("coinsList");
-            coinsList.innerHTML = '';
-            for (const coinId in data) {
-                const coin = data[coinId];
-                const li = document.createElement("li");
-                li.textContent = `${coin.name}: $${coin.current_price}`;
-                coinsList.appendChild(li);
-            }
-        }
-
-        // Example: Replace with a valid username
-        const username = 'marius';
-        fetchUserAccounts(username);
-        fetchCoinData();
+        // Call the function when the page loads
+        window.onload = fetchCoinsData;
     </script>
+</head>
+<body>
+    <h1>Crypto Exchange</h1>
+    <div id="coinsData"></div>
 </body>
 </html>

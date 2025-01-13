@@ -1,0 +1,23 @@
+{
+	"bitcoin" : 
+	{
+		"current_price" : 90760,
+		"id" : "bitcoin",
+		"name" : "Bitcoin",
+		"symbol" : "btc"
+	},
+	"dogecoin" : 
+	{
+		"current_price" : 0.31551299999999999,
+		"id" : "dogecoin",
+		"name" : "Dogecoin",
+		"symbol" : "doge"
+	},
+	"ethereum" : 
+	{
+		"current_price" : 3056.27,
+		"id" : "ethereum",
+		"name" : "Ethereum",
+		"symbol" : "eth"
+	}
+}
