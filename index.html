@@ -6,43 +6,52 @@
     <title>Crypto Exchange</title>
 </head>
 <body>
-    <button onclick="connectMetaMask()">Connect MetaMask</button>
-    <button onclick="buyTokens()">Buy Tokens</button>
-    <button onclick="sellTokens()">Sell Tokens</button>
+    <h1>Welcome to Crypto Exchange</h1>
 
-    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <div id="userAccounts">
+        <h2>User Accounts</h2>
+        <ul id="accountsList"></ul>
+    </div>
+
+    <div id="coinData">
+        <h2>Coin Data</h2>
+        <ul id="coinsList"></ul>
+    </div>
+
     <script>
-        let web3;
-        let userAccount;
+        // Fetch and display user accounts
+        async function fetchUserAccounts(username) {
+            const response = await fetch(`/accounts?username=${username}`);
+            const data = await response.json();
 
-        async function connectMetaMask() {
-            if (typeof window.ethereum !== 'undefined') {
-                web3 = new Web3(window.ethereum);
-                try {
-                    await window.ethereum.request({ method: 'eth_requestAccounts' });
-                    userAccount = (await web3.eth.getAccounts())[0];
-                    console.log("Connected account:", userAccount);
-                } catch (error) {
-                    console.error("User denied account access", error);
-                }
-            } else {
-                console.error("MetaMask is not installed.");
+            const accountsList = document.getElementById("accountsList");
+            accountsList.innerHTML = '';
+            data.forEach(account => {
+                const li = document.createElement("li");
+                li.textContent = `${account.owner} - ${account.type} - Balance: ${account.balance}`;
+                accountsList.appendChild(li);
+            });
+        }
+
+        // Fetch and display coin data
+        async function fetchCoinData() {
+            const response = await fetch('/coins');
+            const data = await response.json();
+
+            const coinsList = document.getElementById("coinsList");
+            coinsList.innerHTML = '';
+            for (const coinId in data) {
+                const coin = data[coinId];
+                const li = document.createElement("li");
+                li.textContent = `${coin.name}: $${coin.current_price}`;
+                coinsList.appendChild(li);
             }
         }
 
-        async function buyTokens() {
-            const amountToBuy = web3.utils.toWei('0.1', 'ether'); // Example: Buy tokens for 0.1 Ether
-            const result = await web3.eth.sendTransaction({
-                from: userAccount,
-                to: 'YourExchangeAddressHere',
-                value: amountToBuy
-            });
-            console.log("Transaction successful:", result);
-        }
-
-        async function sellTokens() {
-            // Implement token sell logic
-        }
+        // Example: Replace with a valid username
+        const username = 'marius';
+        fetchUserAccounts(username);
+        fetchCoinData();
     </script>
 </body>
 </html>
