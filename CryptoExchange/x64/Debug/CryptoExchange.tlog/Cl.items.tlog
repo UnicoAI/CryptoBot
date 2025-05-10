@@ -1,0 +1,12 @@
+C:\Users\info\source\repos\CryptoExchange\CryptoExchange\Account.cpp;C:\Users\info\source\repos\CryptoExchange\CryptoExchange\x64\Debug\Account.obj
+C:\Users\info\source\repos\CryptoExchange\CryptoExchange\BitcoinAccount.cpp;C:\Users\info\source\repos\CryptoExchange\CryptoExchange\x64\Debug\BitcoinAccount.obj
+C:\Users\info\source\repos\CryptoExchange\CryptoExchange\Cryptobot.cpp;C:\Users\info\source\repos\CryptoExchange\CryptoExchange\x64\Debug\Cryptobot.obj
+C:\Users\info\source\repos\CryptoExchange\CryptoExchange\CryptoBotServer.cpp;C:\Users\info\source\repos\CryptoExchange\CryptoExchange\x64\Debug\CryptoBotServer.obj
+C:\Users\info\source\repos\CryptoExchange\CryptoExchange\CryptoExchange.cpp;C:\Users\info\source\repos\CryptoExchange\CryptoExchange\x64\Debug\CryptoExchange.obj
+C:\Users\info\source\repos\CryptoExchange\CryptoExchange\DataFetcher.cpp;C:\Users\info\source\repos\CryptoExchange\CryptoExchange\x64\Debug\DataFetcher.obj
+C:\Users\info\source\repos\CryptoExchange\CryptoExchange\EthereumAccount.cpp;C:\Users\info\source\repos\CryptoExchange\CryptoExchange\x64\Debug\EthereumAccount.obj
+C:\Users\info\source\repos\CryptoExchange\CryptoExchange\main.cpp;C:\Users\info\source\repos\CryptoExchange\CryptoExchange\x64\Debug\main.obj
+C:\Users\info\source\repos\CryptoExchange\CryptoExchange\NetworkUtils.cpp;C:\Users\info\source\repos\CryptoExchange\CryptoExchange\x64\Debug\NetworkUtils.obj
+C:\Users\info\source\repos\CryptoExchange\CryptoExchange\Transaction.cpp;C:\Users\info\source\repos\CryptoExchange\CryptoExchange\x64\Debug\Transaction.obj
+C:\Users\info\source\repos\CryptoExchange\CryptoExchange\User.cpp;C:\Users\info\source\repos\CryptoExchange\CryptoExchange\x64\Debug\User.obj
+C:\Users\info\source\repos\CryptoExchange\CryptoExchange\WinsockClient.cpp;C:\Users\info\source\repos\CryptoExchange\CryptoExchange\x64\Debug\WinsockClient.obj

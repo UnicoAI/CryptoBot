@@ -1,0 +1,17 @@
+{
+    "bitcoin": {
+        "investment": 0.0,
+        "last_price": 50000.0,
+        "quantity": 0.0
+    },
+    "dogecoin": {
+        "investment": 0.0,
+        "last_price": 0.325063,
+        "quantity": 0.0
+    },
+    "ethereum": {
+        "investment": 0.0,
+        "last_price": 3234.15,
+        "quantity": 0.0
+    }
+}

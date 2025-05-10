@@ -1,0 +1,42 @@
+[
+    {
+        "coin_id": "bitcoin",
+        "price": 93468.0,
+        "profit": 92468.0,
+        "quantity": 1.0,
+        "timestamp": 1736526615,
+        "type": "SELL"
+    },
+    {
+        "coin_id": "ethereum",
+        "price": 3234.15,
+        "profit": 0.0,
+        "quantity": 0.030920025354420788,
+        "timestamp": 1736526900,
+        "type": "BUY"
+    },
+    {
+        "coin_id": "dogecoin",
+        "price": 0.325063,
+        "profit": 0.0,
+        "quantity": 307.6326742816008,
+        "timestamp": 1736526901,
+        "type": "BUY"
+    },
+    {
+        "coin_id": "ethereum",
+        "price": 3236.51,
+        "profit": 0.07297125983643582,
+        "quantity": 0.030920025354420788,
+        "timestamp": 1736526962,
+        "type": "SELL"
+    },
+    {
+        "coin_id": "dogecoin",
+        "price": 0.325318,
+        "profit": 0.07844633194181938,
+        "quantity": 307.6326742816008,
+        "timestamp": 1736526962,
+        "type": "SELL"
+    }
+]
